@@ -281,15 +281,14 @@ transform: translate(-50%, -50%) scale(1.5);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   box-shadow: none;
-  padding-top: 6px ;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 5px 5px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    
 }
 
-.modal button:hover,
-.modal button:focus{
+.modal-button:hover,
+.modal-button:focus{
     background-color: white;
     box-shadow: none;
 }
@@ -305,9 +304,11 @@ transform: translate(-50%, -50%) scale(1.5);
   fill: #000000;
     margin: 0;
     padding: 0;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-.modal button:hover .close,
-.modal button:focus .close{
+.modal-button:hover .close,
+.modal-button:focus .close{
     fill: #2196F3;
 }
 
@@ -353,6 +354,7 @@ border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
 padding-left: 42px;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:hover{
@@ -366,7 +368,7 @@ position: absolute;
 left: 12px;
 top: 50%;
 transform: translateY(-50%);
-/* display: inline-block; */
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus ~.modal-icon,
@@ -401,6 +403,36 @@ margin-bottom: 20px;
     line-height: 14px;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox{
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+         appearance: none;
+}
+
+.checkbox-lable{
+    display: flex;
+    margin-left: 12px;
+}
+
+.cheked-icon{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin: 3px 8.38px 0 0;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.checkbox:checked + .cheked-icon{
+background-color: #2196F3; 
+border: 2px solid #2196F3;
+fill:#fff;
 }
 
 .agreament{
@@ -438,7 +470,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 }
 
-.button-submit{
+.button-submit{ 
     align-items: center;
     margin-top: 30px;
     margin-left: 124px;
@@ -860,6 +892,8 @@ footer{
     margin-right: 70px;
 }
 .form-li{
+    position: relative;
+    height: 95px;
 margin-left: 93px;
 padding-top: 9px;
 }
@@ -985,7 +1019,7 @@ background-color: #2F303A;
 ;
 }
 .submit{
-    position:relative;
+    position: absolute;
     width: 200px;
 height: 50px;
 background: #2196F3;
@@ -993,6 +1027,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 color: #ffffff;
 padding: 10px 62px 10px 29px;
+margin-left: 12px;
 }
 
 .send{

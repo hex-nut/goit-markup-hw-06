@@ -44,8 +44,8 @@
                 <div class="backdrop is-hidden" data-modal> 
                     <div class="modal">
                         <button data-modal-close class="modal-button">
-                            <svg class="close">
-                                <use href="./images/icons/sprite.svg#close-vec" width="18px"; height="18px"> </use>
+                            <svg class="close" width="18px"; height="18px">
+                                <use href="./images/icons/sprite.svg#close-vec"> </use>
                             </svg>
                         </button>
                         <div>
@@ -79,14 +79,16 @@
                                     <textarea class="comment" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
 
                             
-                            <!-- <input type="textarea" name=""  class="form-input comment" id="" placeholder="Введите текст"> -->
-                            <label>
-                            <input type="checkbox" name="policy" value="policy"> <div class="agreament">Соглашаюсь с рассылкой и принимаю <a href="#" class="policy">Условия договора</a></div>
-                            </label>
-                            
-                            <div class="button-submit">
+                            <label class="checkbox-lable">
+                            <input class="checkbox" type="checkbox" name="policy" value="policy"> 
+                            <svg class="cheked-icon" width="16px"; height="15px"> 
+                                <use href="./images/icons/sprite.svg#icon-check"> </use>
+                            </svg>
+                            <div class="agreament">Соглашаюсь с рассылкой и принимаю <a href="#" class="policy">Условия договора</a></div>
+                        </label>
+                        <div class="button-submit"> 
                             <button class="modal-form-button">Отправить</button>
-                            </div>
+                            </div> 
                             </form>
                         </div>
                     </div>
